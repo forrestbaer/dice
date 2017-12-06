@@ -15,7 +15,7 @@ var modRegex = regexp.MustCompile(`([+-])([0-9]+)`)
 var multiple = false
 
 func random(min, max int) int {
-	return rand.Intn(max-min) + min
+	return rand.Intn(max) + min
 }
 
 func areDiceFormatted(dice string) bool {
