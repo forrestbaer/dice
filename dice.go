@@ -80,6 +80,12 @@ func main() {
 
 	args := os.Args[1:]
 	black := color.New(color.FgHiBlack)
+	white := color.New(color.FgWhite)
+
+	if len(args) < 1 {
+		black.Printf("Usage: dice %v\n", color.WhiteString("number of dice + d + sides of dice, i.e. dice 4d5, or multiple dice 1d20 4d2"))
+		white.Printf("Add and subtract multipliers can be used with each dice like 6d3+3 or 8d7-2, etc...\n")
+	}
 
 	if len(args) > 1 {
 		multiple = true
